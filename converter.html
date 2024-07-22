@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Converter - Interactive Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Learning Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="converter.html">Number Converter</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Number Converter</h2>
+            <form id="converterForm">
+                <label for="number">Enter Number:</label>
+                <input type="text" id="number" name="number" required>
+                <label for="fromBase">From Base:</label>
+                <select id="fromBase" name="fromBase">
+                    <option value="2">Binary</option>
+                    <option value="10">Decimal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+                <label for="toBase">To Base:</label>
+                <select id="toBase" name="toBase">
+                    <option value="2">Binary</option>
+                    <option value="10">Decimal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+                <button type="button" onclick="convertNumber()">Convert</button>
+            </form>
+            <p id="result"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

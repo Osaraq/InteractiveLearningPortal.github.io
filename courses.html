@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Interactive Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.jpeg">
+</head>
+<body>
+    <header>
+        <h1>Interactive Learning Portal</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/html/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="/html/courses.html">Courses</a>
+                </li>
+                <li>
+                    <a href="/html/converter.html">Number Converter</a>
+                </li>
+                <li>
+                    <a href="/html/about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="/html/contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 style="color: rgb(109, 99, 87); text-decoration: underline; opacity: 0.7;">Our Courses</h2>
+            <ul class="course-list">
+                <li>
+                    <h3 style="text-decoration: underline;">Course 1</h3>
+                    <p>Introduction to HTML and CSS</p>
+                    <hr>
+                    <img src="courses.png">
+                    <div class="course-content">
+                        <h3>HTML Introduction</h3>
+                        <p>HTML (HyperText Markup Language) is the standard language for creating webpages. It describes the structure of a webpage using a series of elements or tags that define different parts of the content, such as headings, paragraphs, images, links, and more.</p>
+                        
+                        <h3>CSS Introduction</h3>
+                        <p>CSS (Cascading Style Sheets) is the language used to style an HTML document. CSS describes how HTML elements should be displayed on screen, paper, or in other media. With CSS, you can control the color, font, spacing, layout, and overall appearance of your webpages.</p>
+                    </div>
+                    <button onclick="learnMore('course2')" style="cursor: pointer;">Learn More</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

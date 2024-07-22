@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Scene with Three.js</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+    canvas{
+        display: block;
+    }
+    .chat-container{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    iframe{
+        width: 100%;
+        height: 500px;
+        border: none;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Interactive Learning Portal</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="courses.html">Courses</a>
+                </li>
+                <li>
+                    <a href="converter.html">Number Converter</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="AIchatbot.html">AI Chatbot</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="Jsanimate">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            cube.rotation.x += 0.06;
+            cube.rotation.y += 0.09;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+    </div>
+    <div class="chat-container">
+        <h1>Chat with our AI</h1>
+        <iframe src="https://dante-ai.com/embed/?kb_id=ac42d83e-d4cb-4f95-ad54-52fe338bbffd&token=4502da70-971b-47f9-8059-4e16912aedca&modeltype=gpt-3.5-turbo&mode=false&logo=ZmFsc2U="
+         allow="clipboard-write; clipboard-read; *;microphone *" 
+         width="100%" 
+         height="950" 
+         frameborder="0">
+        </iframe>
+    </div>
+</body>
+</html>
